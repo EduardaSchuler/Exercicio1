@@ -6,7 +6,7 @@ import com.exercicio1.Exercicio1.DAO.Model.UserModel;
 
 public class UserDTO {
 
-    private int id;
+    private String id;
     private String nome;
     private DateFormat dataNascimento;
     private int numDependentes;
@@ -18,7 +18,7 @@ public class UserDTO {
         this.numDependentes = user.getNumDependentes();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

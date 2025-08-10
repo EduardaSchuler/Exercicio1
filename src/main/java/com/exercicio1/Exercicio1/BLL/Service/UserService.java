@@ -14,15 +14,18 @@ public class UserService implements IUserService{
     @Autowired
     IUserRepository userRepository;
 
-    public String getNome(int id) {
+    @Override
+    public String getNome(String id) {
         return userRepository.getNome(id);
     }
 
-    public DateFormat getDataNascimento(int id) {
+    @Override
+    public DateFormat getDataNascimento(String id) {
         return userRepository.getDataNascimento(id);
     }
 
-    public int getNumDependentes(int id) {
+    @Override
+    public int getNumDependentes(String id) {
         return userRepository.getNumDependentes(id);
     }
     
