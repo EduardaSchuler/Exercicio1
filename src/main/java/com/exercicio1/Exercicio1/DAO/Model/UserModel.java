@@ -14,4 +14,28 @@ public class UserModel {
         this.dataNascimento = dataNascimento;
         this.numDependentes = numDependentes;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public DateFormat getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public int getNumDependentes() {
+        return numDependentes;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setNumDependentes(int numDependentes) {
+        this.numDependentes = numDependentes;
+    }
 }
