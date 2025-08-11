@@ -1,6 +1,5 @@
 package com.exercicio1.Exercicio1.DAO.Repository.Contracts;
 
-import java.util.List;
 import com.exercicio1.Exercicio1.DAO.Model.ProdutoModel;
 
 public interface IProdutoRepository {
