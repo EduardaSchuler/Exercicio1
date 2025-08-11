@@ -1,14 +1,15 @@
 package com.exercicio1.Exercicio1.DAO.Model;
 
+import java.sql.Date;
 import java.text.DateFormat;
 
 public class UserModel {
     private String id;
     private String nome;
-    private DateFormat dataNascimento;
+    private Date dataNascimento;
     private int numDependentes;
 
-    public UserModel (String id, String nome, DateFormat dataNascimento, int numDependentes){
+    public UserModel (String id, String nome, Date dataNascimento, int numDependentes){
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -23,7 +24,7 @@ public class UserModel {
         return nome;
     }
 
-    public DateFormat getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 

@@ -1,5 +1,6 @@
 package com.exercicio1.Exercicio1.BLL.DTO;
 
+import java.sql.Date;
 import java.text.DateFormat;
 
 import com.exercicio1.Exercicio1.DAO.Model.UserModel;
@@ -8,7 +9,7 @@ public class UserDTO {
 
     private String id;
     private String nome;
-    private DateFormat dataNascimento;
+    private Date dataNascimento;
     private int numDependentes;
 
     public UserDTO (UserModel user){
@@ -26,7 +27,7 @@ public class UserDTO {
         return nome;
     }
 
-    public DateFormat getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 

@@ -10,13 +10,11 @@ public class VendaDTO {
     private Double imposto;
     private Double valorTotal;
     
-    public VendaDTO (VendaModel venda){
-        this.user = UserDTO.fromModel(venda.getUser());
-        this.produtos = venda.getProdutos().stream()
-            .map(ProdutoDTO::fromModel)
-            .toList(); 
-        this.imposto = venda.getImposto();
-        this.valorTotal = venda.getImposto();
+    public VendaDTO(UserDTO user, List<ProdutoDTO> produtos, Double imposto, Double valorTotal) {
+        this.user = user;
+        this.produtos = produtos;
+        this.imposto = imposto;
+        this.valorTotal = valorTotal;
     }
 
     public UserDTO getUser() {
@@ -35,7 +33,14 @@ public class VendaDTO {
         return valorTotal;
     }
 
-    public VendaDTO fromModel(VendaModel venda){
-        return new VendaDTO(venda);
+    public static VendaDTO fromModel(VendaModel venda){
+        return new VendaDTO(
+            UserDTO.fromModel(venda.getUser()),
+            venda.getProdutos().stream()
+                .map(ProdutoDTO::fromModel)
+                .toList(),
+            venda.getImposto(),
+            venda.getValorTotal()
+        );
     }
 }
