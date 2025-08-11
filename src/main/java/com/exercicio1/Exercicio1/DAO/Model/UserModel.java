@@ -1,7 +1,6 @@
 package com.exercicio1.Exercicio1.DAO.Model;
 
 import java.sql.Date;
-import java.text.DateFormat;
 
 public class UserModel {
     private String id;
