@@ -3,7 +3,7 @@ package com.exercicio1.Exercicio1.WebAPP.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.exercicio1.Exercicio1.BLL.Service.UserService;
+import com.exercicio1.Exercicio1.BLL.Service.Contracts.IUserService;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserService userService; // supondo que já exista listarTodos()
+    private IUserService userService; // supondo que já exista listarTodos()
 
     // @GetMapping
     // public List<UserDTO> listarTodos() {

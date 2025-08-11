@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exercicio1.Exercicio1.BLL.DTO.ProdutoDTO;
-import com.exercicio1.Exercicio1.BLL.Service.ProdutoService;
+import com.exercicio1.Exercicio1.BLL.Service.Contracts.IProdutoService;
 
 @RestController
 @RequestMapping("/produtos")
 public class ProdutoController {
 
     @Autowired
-    private ProdutoService produtoService;
+    private IProdutoService produtoService;
 
     @PostMapping
     public ResponseEntity<Boolean> cadastraProduto(@RequestBody ProdutoDTO produtoDTO) {

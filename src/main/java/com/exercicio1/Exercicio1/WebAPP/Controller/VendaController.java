@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exercicio1.Exercicio1.BLL.DTO.VendaDTO;
-import com.exercicio1.Exercicio1.BLL.Service.VendaService;
+import com.exercicio1.Exercicio1.BLL.Service.Contracts.IVendaService;
 
 @RestController
 @RequestMapping("/vendas")
 public class VendaController {
 
     @Autowired
-    private VendaService vendaService;
+    private IVendaService vendaService;
 
     // Consulta de compras por usuário (id int)
     @GetMapping("/usuario/{userId}")
