@@ -13,18 +13,15 @@ public class ProdutoService implements IProdutoService{
 
     @Autowired
     IProdutoRepository produtoRepository;
-    
-    @Autowired
-    ProdutoDTOtoProdutoModel DTOtoModel;
 
     @Override
     public Boolean cadastraProduto(ProdutoDTO produto) {
-        return produtoRepository.cadastraProduto(DTOtoModel.converter(produto));
+        return produtoRepository.cadastraProduto(ProdutoDTOtoProdutoModel.converter(produto));
     }
 
     @Override
     public Boolean atualizaProduto(ProdutoDTO produto) {
-        return produtoRepository.atualizaProduto(DTOtoModel.converter(produto));
+        return produtoRepository.atualizaProduto(ProdutoDTOtoProdutoModel.converter(produto));
     }
 
     @Override
