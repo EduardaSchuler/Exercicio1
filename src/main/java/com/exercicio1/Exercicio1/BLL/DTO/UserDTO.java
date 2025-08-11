@@ -34,14 +34,6 @@ public class UserDTO {
         return numDependentes;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setNumDependentes(int numDependentes) {
-        this.numDependentes = numDependentes;
-    }
-
     // O método fromModel é um método de fábrica estático (static factory method), ou seja, em vez de criar o DTO usando new AplicativoDTO(...) diretamente onde precisar, você chama:
     public static UserDTO fromModel(UserModel user){
         return new UserDTO(user);
